@@ -65,3 +65,10 @@ if (new File(rootProject.projectDir.parentFile, 'package.json').exists()) {
 dependencies {
   unimodule 'unimodules-core'
 }
+
+allprojects {
+  repositories {
+    google()
+    jcenter()
+  }
+}

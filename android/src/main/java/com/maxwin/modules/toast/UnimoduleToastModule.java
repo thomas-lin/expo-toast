@@ -3,8 +3,7 @@ package com.maxwin.modules.toast;
 import java.util.Map;
 
 import android.content.Context;
-
-import java.util.Map;
+import android.widget.Toast;
 
 import org.unimodules.core.ExportedModule;
 import org.unimodules.core.ModuleRegistry;
@@ -17,9 +16,7 @@ public class UnimoduleToastModule extends ExportedModule {
 
   private ModuleRegistry mModuleRegistry;
 
-  public UnimoduleToastModule(Context context) {
-    super(context);
-  }
+  public UnimoduleToastModule(Context context) { super(context); }
 
   @Override
   public String getName() {
@@ -32,6 +29,7 @@ public class UnimoduleToastModule extends ExportedModule {
   }
 
   @ExpoMethod
-  public void someGreatMethodAsync(Map<String, Object> options, final Promise promise) {
+  public void toastAsync(Map<String, Object> options, final Promise promise) {
+    Toast.makeText(getContext(), "Hello Unimodule", Toast.LENGTH_LONG);
   }
 }
