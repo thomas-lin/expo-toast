@@ -4,7 +4,15 @@
   "description": "UnimoduleToast standalone module",
   "main": "build/index.js",
   "types": "build/index.d.ts",
-  "scripts": {},
+  "scripts": {
+    "build": "expo-module build",
+    "clean": "expo-module clean",
+    "lint": "expo-module lint",
+    "test": "expo-module test",
+    "prepare": "expo-module prepare",
+    "prepublishOnly": "expo-module prepublishOnly",
+    "expo-module": "expo-module"
+  },
   "keywords": [
     "react-native",
     "expo",
@@ -23,9 +31,13 @@
   "peerDependencies": {
     "@unimodules/core": "~1.0.0"
   },
-  "gitHead": "9518929d6f2ba9cf8e0aae81d34cc1eb52f7093a"
-
-,"_resolved": ""
-,"_integrity": ""
-,"_from": "unimodule-toast@latest"
+  "gitHead": "9518929d6f2ba9cf8e0aae81d34cc1eb52f7093a",
+  "_resolved": "",
+  "_integrity": "",
+  "_from": "unimodule-toast@latest",
+  "devDependencies": {
+    "expo-module-scripts": "^1.0.1",
+    "react": "^16.9.0",
+    "react-native-unimodules": "^0.5.4"
+  }
 }
