@@ -1,4 +1,4 @@
 {
-  "name": "unimodule-toast",
+  "name": "expo-toast",
   "platforms": ["android"]
 }

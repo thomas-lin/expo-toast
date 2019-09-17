@@ -1,7 +1,7 @@
 import { NativeModulesProxy } from '@unimodules/core';
 
-const { UnimoduleToast } = NativeModulesProxy;
+const { ExpoToast } = NativeModulesProxy;
 
 export async function toastAsync(options: any) {
-  return await UnimoduleToast.toast(options);
+  return await ExpoToast.toast(options);
 }

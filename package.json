@@ -1,7 +1,7 @@
 {
-  "name": "unimodule-toast",
+  "name": "expo-toast",
   "version": "1.0.0",
-  "description": "UnimoduleToast standalone module",
+  "description": "ExpoToast standalone module",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
@@ -16,7 +16,7 @@
   "keywords": [
     "react-native",
     "expo",
-    "unimodule-toast"
+    "expo-toast"
   ],
   "repository": {
     "type": "git",
