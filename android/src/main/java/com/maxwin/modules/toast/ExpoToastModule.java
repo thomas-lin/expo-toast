@@ -11,12 +11,16 @@ import org.unimodules.core.Promise;
 import org.unimodules.core.interfaces.ExpoMethod;
 
 public class ExpoToastModule extends ExportedModule {
-  private static final String NAME = "ExpoExpoToast";
+  private static final String NAME = "ExpoToast";
   private static final String TAG = ExpoToastModule.class.getSimpleName();
 
   private ModuleRegistry mModuleRegistry;
+  private Context mContext;
 
-  public ExpoToastModule(Context context) { super(context); }
+  public ExpoToastModule(Context context) {
+    super(context);
+    this.mContext = content;
+  }
 
   @Override
   public String getName() {
@@ -30,6 +34,10 @@ public class ExpoToastModule extends ExportedModule {
 
   @ExpoMethod
   public void toastAsync(Map<String, Object> options, final Promise promise) {
-    Toast.makeText(getContext(), "Hello Expo Toast", Toast.LENGTH_LONG);
+    String message = "Hello Expo Toast";
+    if (options.containsKey("message")){
+      message = (String) options.get("message");
+    }
+    Toast.makeText(this.mContext, message, Toast.LENGTH_LONG).show();
   }
 }
