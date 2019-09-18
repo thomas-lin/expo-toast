@@ -19,7 +19,7 @@ public class ExpoToastModule extends ExportedModule {
 
   public ExpoToastModule(Context context) {
     super(context);
-    this.mContext = content;
+    this.mContext = context;
   }
 
   @Override
