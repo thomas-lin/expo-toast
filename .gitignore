@@ -11,9 +11,13 @@ yarn-error.log
 # Android/IntelliJ
 #
 android/build/
+android/gradle/
 android/.idea
 android/.gradle
 android/local.properties
+android/settings.gradle
+android/gradlew
+android/gradlew.bat
 android/*.iml
 
 # BUCK
