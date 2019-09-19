@@ -15,11 +15,9 @@ public class ExpoToastModule extends ExportedModule {
   private static final String TAG = ExpoToastModule.class.getSimpleName();
 
   private ModuleRegistry mModuleRegistry;
-  private Context mContext;
 
   public ExpoToastModule(Context context) {
     super(context);
-    this.mContext = context;
   }
 
   @Override
@@ -38,6 +36,6 @@ public class ExpoToastModule extends ExportedModule {
     if (options.containsKey("message")){
       message = (String) options.get("message");
     }
-    Toast.makeText(this.mContext, message, Toast.LENGTH_LONG).show();
+    Toast.makeText(getContext(), message, Toast.LENGTH_LONG).show();
   }
 }
